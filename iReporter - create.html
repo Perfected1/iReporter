@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iReporter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1><span>i</span>Reporter</h1>
+        </header>
+        <nav>
+            <b><a href="iReporter - Home.html">Home</a> &nbsp; <a href="#">Trending</a> &nbsp;<a href="#">Create</a></li>
+                &nbsp; <a href="iReporter - Profile.html">Profile</a> &nbsp;
+                <a href="#">About</a> &nbsp;<a href="#">Contact</a> <button><a href="iReporter - Welcome.html">Log
+                        Out</a></button></b>
+        </nav>
+        <main>
+            <form action="">
+                <h3>Create a Report</h3><hr>
+                <label for="title">Title :</label>
+                <input type="text" placeholder="Enter Title"><br>
+                <label for="Category">Category:</label>
+                <select name="Category" id="Category">
+                    <option> </option>
+                    <option value="redFlag">Red Flag</option>
+                    <option value="intervention">Intervention</option>
+                </select><br>
+                <label for="location">Event Location :</label>
+                <input type="text" placeholder="Street Address" minlength="10">&nbsp;
+<input type="text" placeholder="City" minlength="4">&nbsp;
+<input type="text" placeholder="State" minlength="4">&nbsp;
+<input type="text" placeholder="Country" minlength="5" maxlength="25">
+<br>
+<label for="Images" >Upload an image</label>
+<input type="file" name="pic" accept="image/*"><br>
+<input type="file" name="pic" accept="video/*">
+<br>
+<textarea name="comment" id="comment" cols="100" rows="5"></textarea>
+
+
+
+            </form>
+        </main>
+        <footer>
+            <p><small>Copyright &copy; 2018 Chike Nnamadim. All Rights Reserved.
+                </small></p>
+        </footer>
+    </div>
+</body>
+
+</html>

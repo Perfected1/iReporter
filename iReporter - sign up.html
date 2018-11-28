@@ -25,25 +25,32 @@
             <form action="iReporter - Home.html">
                 <h3>Sign Up for Free!</h3>
                 <fieldset>
-                    <label>First Name:</label> &nbsp;
+                    <label for="firstName">First Name:</label> &nbsp;
                     <input type="text" name="firstName" id="firstName" placeholder="First Name" required autofocus>
+                    <br><br>
+                    <label for="lastName">Last Name:</label> &nbsp; <input type="text" id="surName" name="sName" placeholder="Surname"
+                        required><br><br>
+                        <label for="otherNames">Other Names:</label>&nbsp;
+                        <input type="text" name="otherNames" id="otherNames" placeholder="Other Names"><br><br>
+                    <label for="phoneNumber">Phone Number:</label>&nbsp;
+                    <input type="phone" name="phoneNumber" id="phoneNumber"><br><br>
+                        <label>E-mail:</label> &nbsp;
+                    <input type="email" name="email" placeholder="jdoe@example.com" required><br>
                     <br>
-                    <label>Surname:</label> &nbsp; <input type="text" id="surName" name="sName" placeholder="Surname"
-                        required><br>
-                    <label>E-mail:</label> &nbsp;
-                    <input type="email" name="email" placeholder="jdoe@example.com" required>
-                    <br> <label>Date Of Birth:</label>
-                    <input type="date" name="dob" required>
+                     <label>Date Of Birth:</label>
+                    <input type="date" name="dob" required><br>
                     <br><label>Gender:</label>
                     <input type="radio" name="genderOption" value="male"> Male
-                    <input type="radio" name="genderOption" value="female"> Female<br>
+                    <input type="radio" name="genderOption" value="female"> Female<br><br>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your Username"><br><br>
                     <label>Choose a Password:</label>
                     <input type="password" name="pWord" minlength="7" maxlength="15" placeholder="Enter password"
-                        required><br>
+                        required><br><br>
                     <label>Confirm Password:</label>
                     <input type="password" name="pWord" minlength="7" maxlength="15" placeholder="Please confirm password"
                         required>
-                    <br><br>
+                    <br><br><br>
                     <input type="checkbox" required> I agree to all the <a href="T&C.html">terms and conditions</a>
                     <button type="submit">Submit</button>
                     <input type="submit" onclick="newSign()" value="Submit">
