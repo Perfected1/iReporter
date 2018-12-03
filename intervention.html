@@ -16,22 +16,18 @@
             <h1><span>i</span>Reporter</h1>
         </header>
         <nav>
-            <b><a href="iReporter - Home.html">Home</a> &nbsp; <a href="#">Trending</a> &nbsp;<a href="#">Create</a></li>
-                &nbsp; <a href="iReporter - Profile.html">Profile</a> &nbsp;
-                <a href="#">About</a> &nbsp;<a href="#">Contact</a> <button><a href="iReporter - Welcome.html">Log
+            <b><a href="home.html">Home</a> &nbsp;<a href="red-flag.html">New Red-flag</a> &nbsp;<a href="intervention.html">New
+                    Intervention</a>
+                &nbsp; <a href="profile.html">Profile</a> &nbsp;
+                <a href="#">About</a> &nbsp; <button><a href="index.html">Log
                         Out</a></button></b>
         </nav>
         <main>
             <form action="">
-                <h3>Create a Report</h3>
+                <h3>Create an Intervention Report</h3>
                 <hr>
                 <label for="title">Title :</label>
                 <input type="text" placeholder="Enter Title"><br>
-                <label for="Category">Category:</label>
-                <select name="Category" id="Category">
-                    <option> </option>
-                    <option value="redFlag">Red Flag</option>
-                    <option value="intervention">Intervention</option>
                 </select><br>
                 <label for="location">Event Location :</label>
                 <input type="text" placeholder="Street Address" minlength="10">&nbsp;
@@ -44,8 +40,9 @@
                 <label for="video">Upload a Video</label>
                 <input type="file" name="pic" accept="video/*">
                 <br>
-                <textarea name="comment" id="comment" cols="100" rows="5"></textarea><br>
-                <input type="submit" value="Submit">
+                <label for="comment">Comment :</label>
+                <textarea name="comment" id="comment" cols="100" rows="5" placeholder="Enter Report here !"></textarea><br>
+                <button><a href="profile.html">Submit</a></button>
 
 
             </form>

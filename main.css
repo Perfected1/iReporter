@@ -211,40 +211,32 @@ nav a:active {
 }
 
 .content {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /*a display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    display: flex;
+    justify-content: center;
+
 }
 .trend {
-    /* flex: 0 0 20%;
-    padding: 5px; */
     margin: 10px;
     padding: 5px;
     border: thin solid white;
+    flex-basis: 30%;
 }
 .main {
-    /* flex: 0 0 50%;
-    padding: 5px; */
     border: thin solid white;
     margin: 10px;
     padding: 5px;
+    flex-basis: 70%;
+
 }
 .main p {
     padding: .5em; 
 }
 .main img {
-    width: 20em;
+    width: 50%;
     height: 8em;
     padding: 0 25%;
-}
-.aside {
-    /* flex: 0 0 15%;
-    padding: 5px; */
-    margin: 10px;
-    padding: 5px;
-    border: thin solid white;
 }
 form {
     background-color: #e9e9f070;
@@ -256,23 +248,22 @@ form {
 .pf-pics{
     border-bottom: .5em solid #1459ee;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .type{
     text-align: center;
     margin: 0 25%;
-    background-color: #1459ee;
+    background-color: #e9ebf0;
 }
 .type div {
     padding: 2% 10% 0 10%;
-    border-bottom: .5em solid #ffffff;
+    border-bottom: .5em solid #5f9be9;
 }
 .type p {
     text-align: left;
 }
 .pf-pics img{
     border: 1em 0em;
-
     width: 150px;
     height: 150px;
     float: none;
