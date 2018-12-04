@@ -87,4 +87,3 @@ const users = [{
 ]
 
 export default reports;
-export default users;
