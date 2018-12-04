@@ -37,6 +37,46 @@ app.get('/api/v1/reports/:id', (req, res) => {
     });
 });
 
+//endpoint for creating a new report
+app.post('/api/v1/reports', (req, res) => {
+    if (!req.body.title) {
+        return res.status(400).send({
+            success: 'false',
+            message: 'title is required'
+        });
+    } else if (!req.body.comment) {
+        return res.status(400).send({
+            success: 'false',
+            message: 'comment is required!'
+        })
+    }
+    if (!req.body.location) {
+        return res.status(400).send({
+            success: 'false',
+            message: 'location is required!'
+        })
+    }
+    if (!req.body.type) {
+        return res.status(400).send({
+            success: 'false',
+            message: 'Type is Required!'
+        })
+    }
+    const report = {
+        id: db.length + 1,
+        title: req.body.title,
+        comment: req.body.comment,
+        type: req.body.type,
+        location: req.body.location
+    }
+    db.push(report);
+    return res.status(201).send({
+        succcess: 'true',
+        message: 'report successfully submitted to the Admin for review',
+        report,
+    });
+    });
+
 const PORT = 5000;
 
 app.listen(PORT, () => {
