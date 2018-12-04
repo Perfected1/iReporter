@@ -77,6 +77,68 @@ app.post('/api/v1/reports', (req, res) => {
     });
     });
 
+    //endpoint for editing/updating a report
+    app.put('/api/v1/reports/:id', (req, res) => {
+        const id = parseInt(req.params.id, 10);
+
+        let reportFound;
+        let itemIndex;
+        db.map((reports, index) => {
+            if (reports.id === id) {
+                reportFound = reports;
+                itemIndex = index;
+            }
+        });
+
+
+        if (!reportFound) {
+            return res.status(404).send({
+                success: 'false',
+                message: 'Report not Found!',
+            });
+        }
+
+        if (!req.body.title) {
+            return res.status(400).send({
+                success: 'false',
+                message: 'Title is required!',
+            });
+        } else if (!req.body.comment) {
+            return res.status(400).send({
+                success: 'false',
+                message: 'Comment is required!',
+            });
+        }
+        if (!req.body.type) {
+            return res.status(400).send({
+                success: 'false',
+                message: 'type is required!',
+            });
+        }
+        if (!req.body.location) {
+            return res.status(400).send({
+                success: 'false',
+                message: 'location is required!'
+            });
+        }
+        const updateReport = {
+            id: reportFound.id,
+            title: req.body.title || reportFound.title,
+            comment: req.body.comment || reportFound.comment,
+            type: req.body.type || reportFound.type,
+            location: req.body.location || reportFound.location,
+        };
+        db.splice(itemIndex, 1, updateReport);
+
+        return res.status(201).send({
+            success: 'true',
+            message: 'Report updated successfully!',
+            updateReport,
+        });
+    });
+
+
+
 const PORT = 5000;
 
 app.listen(PORT, () => {
