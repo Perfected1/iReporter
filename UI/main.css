@@ -1,15 +1,4 @@
 @media only screen and (max-width: 1024px) {
-    main {
-        margin-left: 0;
-    }
-
-    nav {
-        float: none;
-        width: auto;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
     body {
         margin: 0;
     }
@@ -25,7 +14,6 @@
 
     nav li {
         display: inline-block;
-        padding: 0.5em;
     }
 
     nav ul {
@@ -34,6 +22,9 @@
 
     nav a {
         border-style: none;
+        display: block;
+        padding: 0.5em 0;
+        border-bottom: 2px ridge #00005d;
     }
 
     h1,
@@ -44,20 +35,21 @@
     p {
         font-size: 90%;
     }
-}
 
-@media only screen and (max-width: 1024px) {
-    main {
-        margin-left: 0;
+    .content {
+        display: flex;
+        flex-wrap: nowrap;
     }
 
-    nav {
-        float: none;
-        width: auto;
+    nav,
+    nav ul,
+    nav li {
+        padding: 0;
     }
+
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
 
     h1,
     h2 {
@@ -83,6 +75,14 @@
         padding: 0.5em 0;
         border-bottom: 2px ridge #00005d;
     }
+
+    .main {
+        width: 90%;
+    }
+
+    .trend {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -112,14 +112,12 @@
         border-style: none;
     }
 
-    h1,
-    h2 {
-        font-size: 120%;
-    }
+}
 
-    p {
-        font-size: 90%;
-    }
+
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -127,22 +125,27 @@ body {
     color: rgb(19, 16, 16);
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    min-height: 100%;
 }
+
 header {
-  background: linear-gradient(to right, #020d4b, #0f24e0);
-  justify-content: center;
+    background: linear-gradient(to right, #020d4b, #0f24e0);
+    box-align: center;
+
 }
 
 h1 {
     margin-top: 0;
-    font-size: 5em;
+    font-size: 250%;
     text-shadow: 2px 2px 2px white;
     text-align: center;
     color: rgb(245, 224, 39);
     line-height: 100%;
     font-family: cursive;
     text-indent: 1em;
-    padding: .25em;
+    padding: .75em 0;
+    margin-bottom: 0px;
 }
 
 span {
@@ -156,7 +159,7 @@ h2 {
     text-align: center;
 }
 
-nav{
+nav {
     background-color: rgba(255, 255, 255, 0.568);
     padding-top: .50em;
     padding-bottom: .50em;
@@ -175,6 +178,7 @@ nav{
     font-size: 1em;
     word-spacing: .50em;
 }
+
 .activities h2 {
     color: #ffffff;
     background-color: inherit;
@@ -186,10 +190,16 @@ footer {
     text-align: center;
     font-size: 1em;
     font-style: italic;
+    margin-top: 20px;
     border-top: thin solid #aeaed4;
-    padding-top: 5px;
     color: #f80606;
     background-color: #ffffff;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -20px;
+
 }
 
 p {
@@ -214,30 +224,36 @@ nav a:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #0f24e0;
 }
+
 .trend {
-    flex: 0 0 20%;
+    margin: 10px;
     padding: 5px;
     border: thin solid white;
+    background-color: #e9e9f0;
+    width: 30%;
 }
+
 .main {
-    flex: 0 0 50%;
-    padding: 5px;
     border: thin solid white;
+    margin: 10px;
+    padding: 5px;
+    margin-bottom: 1em;
+    background-color: #e9e9f0;
+    width: 60%;
 }
+
 .main p {
-    padding: .5em; 
+    padding: .5em;
 }
+
 .main img {
-    width: 20em;
+    width: 50%;
     height: 8em;
     padding: 0 25%;
 }
-.aside {
-    flex: 0 0 15%;
-    padding: 5px;
-    border: thin solid white;
-}
+
 form {
     background-color: #e9e9f070;
     margin: 1em 5em;
@@ -245,39 +261,47 @@ form {
     font-size: 1em;
     justify-items: center;
 }
-.pf-pics{
+
+.pf-pics {
     border-bottom: .5em solid #1459ee;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
-.type{
+
+.type {
     text-align: center;
     margin: 0 25%;
-    background-color: #1459ee;
+    background-color: #e9ebf0;
 }
+
 .type div {
     padding: 2% 10% 0 10%;
-    border-bottom: .5em solid #ffffff;
+    border-bottom: .5em solid #5f9be9;
 }
+
 .type p {
     text-align: left;
 }
-.pf-pics img{
-    border: 1em 0em;
 
+.pf-pics img {
+    border: 1em 0em;
     width: 150px;
     height: 150px;
     float: none;
-    box-shadow: 2px 3px 3px 1px white;    
+    box-shadow: 2px 3px 3px 1px white;
 }
+
 img {
     float: left;
     width: 35%;
     padding: .5em;
 }
-h3, h4 {
+
+h3,
+h4 {
     text-align: center;
 }
+
 form button {
     background-color: rgb(5, 42, 252);
     width: 100%;
