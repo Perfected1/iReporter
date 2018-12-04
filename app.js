@@ -90,7 +90,6 @@ app.post('/api/v1/reports', (req, res) => {
             }
         });
 
-
         if (!reportFound) {
             return res.status(404).send({
                 success: 'false',
@@ -137,7 +136,25 @@ app.post('/api/v1/reports', (req, res) => {
         });
     });
 
-
+//endpoint for deleting a report
+app.delete('/api/v1/reports/:id', (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    
+    db.map((reports, index) => {
+        if (reports.id === id) {
+          
+    db.splice(index, 1);
+    return res.status(200).send({
+        success: 'true',
+        message: 'Report was successfully deleted!',
+    });
+}
+});
+return res.status(404).send({
+            success: 'false',
+            message: 'Report was not found!',
+        });
+    });
 
 const PORT = 5000;
 
