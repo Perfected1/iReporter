@@ -1,10 +1,10 @@
 # iReporter
 iReporter is an app that enables users notify appopriate authorities and the general public on any form of corruption.
 
-#Motivation
+# Motivation:
 Corruption has eaten deep into our system as a country, in our organizations, religious bodies, our society and even into our immediate families, hence the need for a platform where the citizens help government agencies to point out the corrupt practices around us, and also the citizens can track their report.
 
-#Required Features
+# Required Features:
 - Users can sign up
 - Users can login
 - Users can view their Profile and all previous activities
