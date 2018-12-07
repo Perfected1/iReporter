@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from './routes/index.js';
+
 //set up the express app
 const app = express();
 
@@ -20,3 +21,5 @@ const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
 });
+
+export default app;
