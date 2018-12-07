@@ -4,7 +4,7 @@ import db from '../db/db';
 class ReportsController {
     static getAllReports(req, res) {
         res.status(200).json({
-            success: 'true',
+            success:  true,
             message: 'Reports retrieved successfully!',
             reports: db,
         });
@@ -17,14 +17,14 @@ class ReportsController {
 
         if (report) {
             return res.status(200).json({
-            success: 'true',
+            success:  true,
             message: 'Report retrieved successfully!',
             report,
         });
         }
 
         return res.status(404).json({
-            success: 'false',
+            success:  false,
             message: 'Report does not exist',
         });
     }
@@ -33,24 +33,24 @@ class ReportsController {
     static createReport(req, res) {
         // if (!req.body.title) {
         //     return res.status(400).json({
-        //         success: 'false',
+        //         success:  false,
         //         message: 'title is required'
         //     });
         // } else if (!req.body.comment) {
         //     return res.status(400).json({
-        //         success: 'false',
+        //         success:  false,
         //         message: 'comment is required!'
         //     })
         // }
         // if (!req.body.location) {
         //     return res.status(400).json({
-        //         success: 'false',
+        //         success:  false,
         //         message: 'location is required!'
         //     })
         // }
         // if (!req.body.type) {
         //     return res.status(400).json({
-        //         success: 'false',
+        //         success:  false,
         //         message: 'Type is Required!'
         //     })
         // }
@@ -64,7 +64,7 @@ class ReportsController {
         }
         db.push(report);
         return res.status(201).json({
-            succcess: 'true',
+            succcess: true,
             message: 'report successfully submitted to the Admin for review',
             report,
         });
@@ -84,31 +84,31 @@ class ReportsController {
 
         if (!reportFound) {
             return res.status(404).json({
-                success: 'false',
+                success:  false,
                 message: 'Report not Found!',
             });
         }
 
         if (!req.body.title) {
             return res.status(400).json({
-                success: 'false',
+                success:  false,
                 message: 'Title is required!',
             });
         } else if (!req.body.comment) {
             return res.status(400).json({
-                success: 'false',
+                success:  false,
                 message: 'Comment is required!',
             });
         }
         if (!req.body.type) {
             return res.status(400).json({
-                success: 'false',
+                success:  false,
                 message: 'type is required!',
             });
         }
         if (!req.body.location) {
             return res.status(400).json({
-                success: 'false',
+                success:  false,
                 message: 'location is required!'
             });
         }
@@ -122,7 +122,7 @@ class ReportsController {
         db.splice(itemIndex, 1, updateReport);
 
         return res.status(201).json({
-            success: 'true',
+            success:  true,
             message: 'Report updated successfully!',
             updateReport,
         });
@@ -140,13 +140,13 @@ class ReportsController {
         });
         if (!reportFound) {
             return res.status(404).json({
-                success: 'false',
+                success:  false,
                 message: 'Report was not found!',
             });
         }
         db.splice(itemIndex, 1);
         return res.status(200).json({
-            success: 'true',
+            success:  true,
             message: 'Report was successfully deleted!',
         });
     }
