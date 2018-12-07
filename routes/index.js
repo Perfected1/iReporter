@@ -4,11 +4,10 @@ import Joi from 'joi';
 import validateRequestPayload from '../middleware/validateRequestPayload';
 
 const CreateReportSchema = Joi.object({
-  userId: Joi.number().positive().integer().required(),
-  weight: Joi.number().positive().required(),
-  pickup: Joi.string().required(),
-  receiver_name: Joi.string().required(),
-  destination: Joi.string().required(),
+  title: Joi.string().required(),
+  type: Joi.string().required(),
+  location: Joi.string().required(),
+  comment: Joi.string().required(),
 });
 
 const router = express.Router();
