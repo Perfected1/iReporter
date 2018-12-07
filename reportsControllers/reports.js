@@ -3,7 +3,7 @@ import db from '../db/db';
 
 class ReportsController {
     static getAllReports(req, res) {
-        return res.status(200).json({
+        res.status(200).json({
             success: 'true',
             message: 'Reports retrieved successfully!',
             reports: db,
@@ -13,15 +13,16 @@ class ReportsController {
     //get specific Report
     static getReport(req, res) {
         const id = parseInt(req.params.id, 10);
-        db.map((reports) => {
-            if (reports.id === id) {
-                return res.status(200).json({
-                    success: 'true',
-                    message: 'Report retrieved successfully!',
-                    reports,
-                });
-            }
+        const report = db.find(reports => reports.id === id);
+
+        if (report) {
+            return res.status(200).json({
+            success: 'true',
+            message: 'Report retrieved successfully!',
+            report,
         });
+        }
+
         return res.status(404).json({
             success: 'false',
             message: 'Report does not exist',
@@ -30,29 +31,30 @@ class ReportsController {
 
     //Create new request
     static createReport(req, res) {
-        if (!req.body.title) {
-            return res.status(400).json({
-                success: 'false',
-                message: 'title is required'
-            });
-        } else if (!req.body.comment) {
-            return res.status(400).json({
-                success: 'false',
-                message: 'comment is required!'
-            })
-        }
-        if (!req.body.location) {
-            return res.status(400).json({
-                success: 'false',
-                message: 'location is required!'
-            })
-        }
-        if (!req.body.type) {
-            return res.status(400).json({
-                success: 'false',
-                message: 'Type is Required!'
-            })
-        }
+        // if (!req.body.title) {
+        //     return res.status(400).json({
+        //         success: 'false',
+        //         message: 'title is required'
+        //     });
+        // } else if (!req.body.comment) {
+        //     return res.status(400).json({
+        //         success: 'false',
+        //         message: 'comment is required!'
+        //     })
+        // }
+        // if (!req.body.location) {
+        //     return res.status(400).json({
+        //         success: 'false',
+        //         message: 'location is required!'
+        //     })
+        // }
+        // if (!req.body.type) {
+        //     return res.status(400).json({
+        //         success: 'false',
+        //         message: 'Type is Required!'
+        //     })
+        // }
+        
         const report = {
             id: db.length + 1,
             title: req.body.title,
@@ -150,5 +152,4 @@ class ReportsController {
     }
 }
 
-// const reportController = new ReportsController();
 export default ReportsController;

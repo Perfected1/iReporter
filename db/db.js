@@ -3,7 +3,7 @@ const reports = [{
         id: 1,
         createdOn: "23/11/2018", //date
         createdBy: "Chike Nnamadim",
-        title: "Internet Fruad",
+        title: "Internet Fraud",
         type: "Red-flag",
         location: "lat, long",
         status: "Approved",
