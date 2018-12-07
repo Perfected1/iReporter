@@ -13,43 +13,55 @@
 <body>
     <div id="container">
         <header>
-            <h1><span>i</span>Reporter</h1>
+            <h1>
+                <span>i</span>Reporter</h1>
         </header>
         <nav>
-            <b><a href="home.html">Home</a> &nbsp;<a href="red-flag.html">New Red-flag</a> &nbsp;<a href="intervention.html">New
-                    Intervention</a>
-                &nbsp; <a href="profile.html">Profile</a> &nbsp;
-                <a href="#">About</a> &nbsp; <button><a href="index.html">Log
-                        Out</a></button></b>
+            <b>
+                <a href="home.html">Home</a> &nbsp;
+                <a href="red-Flag.html">New Red-flag</a> &nbsp;
+                <a href="intervention.html">New Intervention
+                </a>
+                &nbsp;
+                <a href="profile.html">My Profile</a> &nbsp;
+                <a href="#">About</a> &nbsp;
+                <button>
+                    <a href="index.html">Log Out</a>
+                </button>
+            </b>
         </nav>
         <main>
-            <form action="">
+            <form action="home.html">
                 <h3>Create an Intervention Report</h3>
                 <hr>
                 <label for="title">Title :</label>
-                <input type="text" placeholder="Enter Title"><br>
-                </select><br>
-                <label for="location">Event Location :</label>
-                <input type="text" placeholder="Street Address" minlength="10">&nbsp;
-                <input type="text" placeholder="City" minlength="4">&nbsp;
-                <input type="text" placeholder="State" minlength="4">&nbsp;
-                <input type="text" placeholder="Country" minlength="5" maxlength="25">
+                <input type="text" placeholder="Enter Title">
                 <br>
+
+                <label for="location">Event Location :</label>
+                <input type="text" placeholder="Enter Location" required>
+                <br>
+
                 <label for="Images">Upload an Image</label>
-                <input type="file" name="pic" accept="image/*"><br>
+                <input type="file" name="pic" accept="image/*">
+                <br>
+
                 <label for="video">Upload a Video</label>
                 <input type="file" name="pic" accept="video/*">
                 <br>
-                <label for="comment">Comment :</label><br>
-                <textarea name="comment" id="comment" cols="100" rows="5" placeholder="Enter Report here !"></textarea><br>
-                <button><a href="profile.html">Submit</a></button>
 
-
+                <label for="comment">Comment:</label>
+                <br>
+                <textarea name="comment" id="comment" placeholder="Enter Report here!"></textarea>
+                <br>
+                <button type="submit">Submit</button>
             </form>
         </main>
         <footer>
-            <p><small>Copyright &copy; 2018 Chike Nnamadim. All Rights Reserved.
-                </small></p>
+            <p>
+                <small>Copyright &copy; 2018 Chike Nnamadim. All Rights Reserved.
+                </small>
+            </p>
         </footer>
     </div>
 </body>

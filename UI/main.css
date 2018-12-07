@@ -122,7 +122,6 @@ html {
 
 body {
     background-color: rgb(78, 152, 236);
-    color: rgb(19, 16, 16);
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
@@ -149,7 +148,7 @@ h1 {
 }
 
 span {
-    color: #f80606;
+    color: #b10f0fc9;
 }
 
 h2 {
@@ -166,7 +165,6 @@ nav {
     text-align: center;
     font-weight: bold;
     font-size: 1.25em;
-    word-spacing: .75em;
 }
 
 .activities {
@@ -188,28 +186,31 @@ nav {
 
 footer {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.3em;
     font-style: italic;
-    margin-top: 20px;
     border-top: thin solid #aeaed4;
-    color: #f80606;
+    color: #070707;
     background-color: #ffffff;
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-bottom: -20px;
-
+    width: 100%;
 }
 
 p {
     font-size: 1.2em;
-    text-indent: 1em;
+}
+
+button {
+    border-radius: 10px;
+}
+button :hover {
+    background-color: green;
 }
 
 nav a {
-    text-decoration: none;
     font-size: 1.2em;
+    padding: 0px 10px;
+}
+a {
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -240,7 +241,6 @@ nav a:active {
     margin: 10px;
     padding: 5px;
     margin-bottom: 1em;
-    background-color: #e9e9f0;
     width: 60%;
 }
 
@@ -252,14 +252,6 @@ nav a:active {
     width: 50%;
     height: 8em;
     padding: 0 25%;
-}
-
-form {
-    background-color: #e9e9f070;
-    margin: 1em 5em;
-    padding: .75em;
-    font-size: 1em;
-    justify-items: center;
 }
 
 .pf-pics {
@@ -297,13 +289,26 @@ img {
     padding: .5em;
 }
 
-h3,
-h4 {
+h3, h4 {
     text-align: center;
 }
 
-form button {
-    background-color: rgb(5, 42, 252);
+form {
+    margin: 2% 25%;
+    padding: 1% 5%;
+    background-color: gray;
+    color: white;
+    border-radius: 0 5%;
+    border-bottom: 15%;
+}
+
+form button, input, textarea {
     width: 100%;
     font-size: 1.2em;
+}
+
+.report {
+    border-bottom: .5em solid rgb(20, 3, 252);
+    background-color: rgb(252, 252, 252);
+    padding: 10px;
 }
